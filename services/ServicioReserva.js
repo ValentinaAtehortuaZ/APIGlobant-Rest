@@ -1,7 +1,7 @@
 //Importo el modelo Habitacion
-import {modeloReserva} from '../models/reservaModelo'
+import {modeloReserva} from '../models/reservaModelo.js'
 
-class ServicioReserva{
+export class ServicioReserva{
     
     constructor(){}
 
@@ -13,7 +13,7 @@ class ServicioReserva{
 
     }
 
-    async insertar(reserva){
+    async registrar(reserva){
 
         let reservaNueva=new modeloHabitacion(reserva)
         return await reservaNueva.save()
